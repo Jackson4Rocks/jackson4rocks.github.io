@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070a0f">
+  <meta name="description" content="Leon Sony — Linux and Android developer. Building software, systems, desktop experiences, Android apps, TV projects, and open-source experiments.">
+  <meta name="author" content="Leon Sony">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://jackson4rocks.github.io/">
+  <link rel="icon" href="https://github.com/Jackson4Rocks.png?size=64">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Leon Sony">
+  <meta property="og:title" content="Leon Sony — Linux & Android Developer">
+  <meta property="og:description" content="Linux and Android developer building apps, systems, desktop experiences, and open-source projects.">
+  <meta property="og:url" content="https://jackson4rocks.github.io/">
+  <meta property="og:image" content="https://github.com/Jackson4Rocks.png?size=512">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Leon Sony — Linux & Android Developer">
+  <meta name="twitter:description" content="Linux and Android developer building apps, systems, desktop experiences, and open-source projects.">
+  <title>Leon Sony — Linux & Android Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07090f;--panel:#101622;--panel2:#0b1019;--text:#f4f7fb;--muted:#96a2b6;--dim:#5d697c;
+      --line:rgba(196,208,231,.12);--green:#92f3c6;--blue:#8db7ff;--violet:#c8adff;--orange:#ffbb7d;
+      --max:1180px;--r:28px;--shadow:0 28px 90px rgba(0,0,0,.38)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--text);background:
+      radial-gradient(900px 650px at 0% -10%,rgba(146,243,198,.10),transparent 60%),
+      radial-gradient(900px 700px at 100% 10%,rgba(141,183,255,.10),transparent 60%),
+      radial-gradient(850px 650px at 55% 110%,rgba(200,173,255,.07),transparent 60%),var(--bg);
+      font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.035;background-image:
+      linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+      background-size:38px 38px;mask-image:linear-gradient(180deg,#000,transparent 92%)}
+    ::selection{background:rgba(146,243,198,.25)}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 30px));margin:15px auto}
+    .nav{position:sticky;top:12px;z-index:30;min-height:68px;padding:10px 12px 10px 18px;border:1px solid var(--line);border-radius:22px;
+      display:flex;align-items:center;justify-content:space-between;gap:18px;background:rgba(7,10,16,.7);backdrop-filter:blur(24px);box-shadow:0 18px 55px rgba(0,0,0,.2)}
+    .brand{display:flex;align-items:center;gap:11px}
+    .avatar{width:42px;height:42px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#111722}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .brand strong{display:block;font-size:14px}
+    .brand span{display:block;margin-top:3px;color:var(--green);font:10px "DM Mono",monospace;letter-spacing:.08em}
+    .navlinks{display:flex;gap:4px}
+    .navlinks a{padding:9px 12px;border-radius:999px;color:var(--muted);font-size:12px;font-weight:700}
+    .navlinks a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+    .navlinks .cta{background:var(--green);color:#07100c;padding-inline:15px}
+    .hero{position:relative;overflow:hidden;min-height:760px;margin-top:12px;padding:74px 58px 60px;border:1px solid var(--line);border-radius:36px;
+      display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center;background:
+      radial-gradient(circle at 72% 44%,rgba(146,243,198,.08),transparent 28%),
+      linear-gradient(125deg,rgba(7,9,14,.98),rgba(7,9,14,.79));box-shadow:var(--shadow)}
+    .hero:after{content:"";position:absolute;width:700px;height:700px;border-radius:50%;right:-300px;top:50%;transform:translateY(-50%);
+      border:1px solid rgba(146,243,198,.08);box-shadow:0 0 0 75px rgba(146,243,198,.025),0 0 0 150px rgba(141,183,255,.02);pointer-events:none}
+    .grid{position:absolute;inset:0;opacity:.22;background:
+      linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:54px 54px;mask-image:linear-gradient(90deg,#000,transparent 86%)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(146,243,198,.18);border-radius:999px;background:rgba(146,243,198,.05);
+      color:var(--green);font:10px "DM Mono",monospace;letter-spacing:.08em}
+    .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 16px rgba(146,243,198,.7)}
+    h1{margin:24px 0 18px;font-size:clamp(70px,8.5vw,122px);line-height:.86;letter-spacing:-.08em;font-weight:800}
+    h1 span{color:var(--green)}
+    .hero p{max-width:680px;margin:0;color:var(--muted);font-size:17px;line-height:1.85}
+    .hero p strong{color:var(--text)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .btn{min-height:50px;padding:0 18px;border:1px solid var(--line);border-radius:999px;display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.045);font-size:12px;font-weight:800;transition:.22s ease}
+    .btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+    .btn.primary{background:var(--green);color:#07100c;border-color:transparent}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px}
+    .meta span{padding:10px 12px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025);color:#aab5c7;font:10px "DM Mono",monospace}
+    .meta b{color:var(--text)}
+    .terminal{position:relative;z-index:2;padding:18px;border:1px solid var(--line);border-radius:26px;background:rgba(9,14,22,.76);backdrop-filter:blur(18px);
+      box-shadow:0 24px 70px rgba(0,0,0,.32);transform:rotate(1deg)}
+    .term-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+    .dots{display:flex;gap:7px}.dots i{width:8px;height:8px;border-radius:50%;background:#374151}.term-name{color:#667287;font:9px "DM Mono",monospace}
+    pre{margin:18px 0 0;white-space:pre-wrap;color:#c8d3e4;font:12px/1.9 "DM Mono",monospace}
+    .g{color:var(--green)}.b{color:var(--blue)}.v{color:var(--violet)}.o{color:var(--orange)}.d{color:#657185}
+    section{scroll-margin-top:100px}.section{padding:112px 8px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:22px}
+    .small{color:var(--green);font:10px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+    h2{margin:10px 0 0;font-size:clamp(42px,5vw,68px);line-height:.98;letter-spacing:-.065em}
+    .lead{max-width:480px;margin:0;color:var(--muted);font-size:13px;line-height:1.85}
+    .bento{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:12px}
+    .tile{position:relative;overflow:hidden;min-height:255px;padding:25px;border:1px solid var(--line);border-radius:26px;
+      background:linear-gradient(180deg,rgba(18,24,36,.78),rgba(10,14,22,.68));transition:.25s ease}
+    .tile:hover{transform:translateY(-7px);border-color:rgba(255,255,255,.18);box-shadow:0 25px 70px rgba(0,0,0,.21)}
+    .tile.large{grid-row:span 2;min-height:522px}
+    .tile:after{content:"";position:absolute;width:260px;height:260px;right:-110px;bottom:-130px;border-radius:50%;background:rgba(146,243,198,.055)}
+    .num{color:#5f6b7f;font:9px "DM Mono",monospace}.tile h3{position:relative;z-index:1;margin:28px 0 9px;font-size:26px;letter-spacing:-.04em}
+    .tile p{position:relative;z-index:1;margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+    .chips{position:relative;z-index:1;display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}
+    .chip{padding:6px 9px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#b4bfd1;font:9px "DM Mono",monospace}
+    .terminal-art{position:absolute;right:27px;bottom:25px;width:58%;max-width:300px;aspect-ratio:1.5;border-radius:20px;border:1px solid rgba(146,243,198,.2);
+      background:linear-gradient(135deg,rgba(146,243,198,.08),rgba(141,183,255,.04));transform:rotate(-5deg);box-shadow:0 18px 45px rgba(0,0,0,.25)}
+    .terminal-art:before{content:"";position:absolute;inset:13px;border-radius:13px;border:1px dashed rgba(146,243,198,.18)}
+    .terminal-art:after{content:">_";position:absolute;left:28px;top:22px;color:var(--green);font:18px "DM Mono",monospace}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .project{padding:25px;border:1px solid var(--line);border-radius:26px;background:var(--panel);transition:.25s ease}
+    .project:hover{transform:translateY(-7px);border-color:rgba(255,255,255,.18)}
+    .project .id{color:#5d687b;font:9px "DM Mono",monospace}.project h3{margin:24px 0 7px;font-size:28px;letter-spacing:-.05em}
+    .project .type{color:var(--green);font:10px "DM Mono",monospace}.project p{margin:13px 0 21px;color:var(--muted);font-size:12px;line-height:1.8}
+    .project a{font-size:11px;font-weight:800}.project a:hover{color:var(--green)}
+    .about{display:grid;grid-template-columns:1.05fr .95fr;gap:12px}.panel{padding:29px;border:1px solid var(--line);border-radius:28px;background:var(--panel)}
+    .panel h3{margin:0;font-size:27px;letter-spacing:-.045em}.panel p{margin:13px 0 0;color:var(--muted);font-size:13px;line-height:1.9}.panel p strong{color:var(--text)}
+    .stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:19px}.stack{padding:12px 13px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}
+    .stack small{display:block;color:#697487;font:9px "DM Mono",monospace;text-transform:uppercase}.stack b{display:block;margin-top:4px;font-size:12px}
+    .callout{margin-top:19px;padding:14px 15px;border:1px solid rgba(146,243,198,.15);border-radius:17px;background:rgba(146,243,198,.045);color:#aebacd;font-size:11px;line-height:1.7}
+    .contact{margin:112px 0 18px;padding:88px 24px;text-align:center;border:1px solid var(--line);border-radius:36px;background:
+      radial-gradient(circle at 50% 0%,rgba(146,243,198,.10),transparent 38%),var(--panel2);box-shadow:var(--shadow)}
+    .contact h2{font-size:clamp(54px,7vw,94px)}.contact p{max-width:560px;margin:15px auto 0;color:var(--muted);font-size:13px;line-height:1.85}.contact .actions{justify-content:center}
+    footer{display:flex;justify-content:space-between;gap:16px;padding:20px 6px 34px;color:#647084;font:9px "DM Mono",monospace}footer a:hover{color:var(--text)}
+    @media(max-width:980px){.hero{grid-template-columns:1fr;padding:58px 34px 34px}.terminal{max-width:720px;transform:none}.bento{grid-template-columns:1fr 1fr}.tile.large{grid-column:1/-1;grid-row:auto;min-height:370px}.projects{grid-template-columns:1fr}.about{grid-template-columns:1fr}}
+    @media(max-width:700px){.wrap{width:calc(100% - 10px);margin:5px auto}.nav{top:6px;min-height:62px;border-radius:18px}.navlinks a:not(.cta){display:none}
+      .hero{margin-top:6px;padding:47px 22px 25px;border-radius:27px}h1{font-size:clamp(66px,18vw,94px)}.hero p{font-size:15px}.section{padding-top:82px}.head{display:block}.lead{margin-top:14px}
+      .bento{grid-template-columns:1fr}.tile.large{grid-column:auto;min-height:390px}.stack-grid{grid-template-columns:1fr}.contact{margin-top:82px;padding:68px 20px;border-radius:28px}footer{justify-content:center;flex-wrap:wrap;text-align:center}
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="#top">
+      <div class="avatar"><img src="https://github.com/Jackson4Rocks.png?size=128" alt="Leon Sony"></div>
+      <div><strong>Leon Sony</strong><span>Jackson4Rocks</span></div>
+    </a>
+    <nav class="navlinks">
+      <a href="#focus">Focus</a><a href="#projects">Projects</a><a href="#about">About</a>
+      <a class="cta" href="https://github.com/Jackson4Rocks" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="grid"></div>
+      <div>
+        <span class="eyebrow"><i></i> LINUX DEVELOPER · ANDROID DEVELOPER · OPEN SOURCE</span>
+        <h1>I build for<br><span>Linux &amp; Android.</span></h1>
+        <p>I'm Leon — a developer who spends most of my time between <strong>Android development</strong> and <strong>Linux</strong>. I build apps, Android TV experiences, desktop systems, and open-source experiments. ROM/device work is part of the toolbox, but <strong>I'm not really a ROM builder first.</strong></p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">See what I build ↓</a>
+          <a class="btn" href="https://github.com/Jackson4Rocks" target="_blank" rel="noreferrer">Open GitHub ↗</a>
+        </div>
+        <div class="meta">
+          <span><b>01</b> Android / Kotlin</span><span><b>02</b> Linux / systems</span><span><b>03</b> Android TV</span>
+        </div>
+      </div>
+      <div class="terminal">
+        <div class="term-top"><div class="dots"><i></i><i></i><i></i></div><div class="term-name">~/leon.profile</div></div>
+        <pre><span class="d">$</span> <span class="g">whoami</span>
+
+<span class="v">Leon Sony</span>
+<span class="d">role:</span>      <span class="b">Linux + Android developer</span>
+<span class="d">focus:</span>     Android / Kotlin / Linux
+<span class="d">also:</span>      Android TV / open source
+<span class="d">side quest:</span> ROM + device work
+
+<span class="d">$</span> <span class="g">git status</span>
+
+<span class="o">building things.</span>
+<span class="b">breaking things.</span>
+<span class="g">learning why.</span></pre>
+      </div>
+    </section>
+
+    <section id="focus" class="section">
+      <div class="head"><div><div class="small">01 · focus</div><h2>Two platforms.<br>One curiosity.</h2></div>
+        <p class="lead">Android is where a lot of the application work happens. Linux is where I like experimenting with systems, desktops, tooling, and everything around the software.</p></div>
+      <div class="bento">
+        <article class="tile large">
+          <div class="num">01 / ANDROID</div>
+          <h3>Building Android software from the UI down to the platform.</h3>
+          <p>I like the whole Android stack: app architecture, interfaces, platform APIs, build tooling, media, TV experiences, and the systems underneath them.</p>
+          <div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack</span><span class="chip">Compose</span><span class="chip">Gradle</span><span class="chip">AOSP</span></div>
+          <div class="terminal-art" aria-hidden="true"></div>
+        </article>
+        <article class="tile">
+          <div class="num">02 / LINUX</div>
+          <h3>Linux systems &amp; desktop</h3>
+          <p>Arch-based projects, desktop UX, Wayland, build pipelines, packaging, shell tooling, and lots of “why is this broken?” moments.</p>
+          <div class="chips"><span class="chip">Arch</span><span class="chip">Hyprland</span><span class="chip">Git</span></div>
+        </article>
+        <article class="tile">
+          <div class="num">03 / TV</div>
+          <h3>Android TV</h3>
+          <p>Remote-first interfaces and media experiences designed for an actual TV, not just a phone pretending to be one.</p>
+          <div class="chips"><span class="chip">Android TV</span><span class="chip">Media3</span><span class="chip">UX</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="head"><div><div class="small">02 · projects</div><h2>Stuff I'm<br>building.</h2></div>
+        <p class="lead">A mix of Android, TV, Linux, and systems projects. The common theme is learning by making something real.</p></div>
+      <div class="projects">
+        <article class="project"><div class="id">01 / ANDROID · PC</div><h3>CathodeOS</h3><div class="type">AOSP-based Android for x86_64</div>
+          <p>An experimental Android project targeting generic PCs and laptops, with the fun of bringing Android concepts into a different hardware environment.</p>
+          <a href="https://github.com/Jackson4Rocks/CathodeROM" target="_blank" rel="noreferrer">Open repository ↗</a></article>
+        <article class="project"><div class="id">02 / ANDROID TV</div><h3>PublivoreTube</h3><div class="type">Open-source TV client</div>
+          <p>A TV-focused Android client with remote-first navigation, YouTube metadata, and a native playback layer under development.</p>
+          <a href="https://github.com/Jackson4Rocks/PublivoreTube" target="_blank" rel="noreferrer">Open repository ↗</a></article>
+        <article class="project"><div class="id">03 / LINUX</div><h3>Calypso Linux</h3><div class="type">Arch-based Linux project</div>
+          <p>A separate Linux project exploring system integration, desktop UX, packaging, documentation, and polished defaults.</p>
+          <a href="https://github.com/Jackson4Rocks/calypso-linux" target="_blank" rel="noreferrer">Open repository ↗</a></article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="head"><div><div class="small">03 · about</div><h2>Developer first.<br>ROM builder? Not really.</h2></div>
+        <p class="lead">I enjoy working close to the operating system, but my identity is much broader than ROM building.</p></div>
+      <div class="about">
+        <article class="panel">
+          <h3>Hi, I'm Leon.</h3>
+          <p>I'm a <strong>Linux and Android developer</strong> interested in software that sits close to the platform. That means Android apps, Android TV, Linux desktops, system experiments, and open source.</p>
+          <p>I do <strong>some ROM and device work</strong>, especially when a project calls for it, but it is not the center of what I build. Android development and Linux are the two big areas I keep coming back to.</p>
+          <p>My favorite workflow is simple: idea → code → build → test → break something → understand it → fix it → polish it.</p>
+          <div class="callout">I like making software where you can see the connection between the code, the system, and the machine underneath.</div>
+        </article>
+        <aside class="panel">
+          <div class="small">Toolbox</div>
+          <div class="stack-grid">
+            <div class="stack"><small>Android</small><b>Kotlin / Java</b></div>
+            <div class="stack"><small>UI</small><b>Jetpack Compose</b></div>
+            <div class="stack"><small>Platform</small><b>AOSP / Android TV</b></div>
+            <div class="stack"><small>Linux</small><b>Arch / Wayland</b></div>
+            <div class="stack"><small>Systems</small><b>Git / Shell / Python</b></div>
+            <div class="stack"><small>Native</small><b>C / C++ / CMake</b></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="small">04 · find me</div>
+      <h2>Let's build<br><span style="color:var(--green)">something cool.</span></h2>
+      <p>My public work lives on GitHub. That's probably the best place to see what I'm building right now.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/Jackson4Rocks" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a class="btn" href="https://github.com/Jackson4Rocks/PublivoreTube" target="_blank" rel="noreferrer">PublivoreTube ↗</a>
+        <a class="btn" href="https://github.com/Jackson4Rocks/calypso-linux" target="_blank" rel="noreferrer">Calypso Linux ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Leon Sony · Jackson4Rocks</span><span><a href="https://github.com/Jackson4Rocks" target="_blank" rel="noreferrer">@Jackson4Rocks</a> · Linux + Android</span></footer>
+</div>
+</body>
+</html>
