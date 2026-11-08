@@ -33,13 +33,9 @@
           <div class="code-row faint-row"><span class="line-number">16</span><code><span class="syntax-comment">~</span></code></div>
           <div class="code-row faint-row"><span class="line-number">17</span><code><span class="syntax-comment">~</span></code></div>
         </div>
-        <div class="vscode-terminal">
-          <div class="terminal-tabs"><span>PROBLEMS</span><span>OUTPUT</span><span>DEBUG CONSOLE</span><b>TERMINAL</b><i>⌃　×</i></div>
-          <div class="terminal-body"><div><span class="terminal-user">leon@arch</span>:<span class="terminal-home">~</span>$ <strong>nvim ~/leon.profile</strong><i class="terminal-caret"></i></div></div>
-        </div>
         <div class="editor-statusline vscode-statusline"><span class="status-branch">⑂ main</span><span>✓ 0 errors</span><span class="status-spacer"></span><span>Ln 14, Col 1</span><span>Spaces: 2</span><span>UTF-8</span><span>Lua</span></div>
       </div>
-        <aside class="neovim-side" aria-label="Neovim side editor"><div class="neovim-side-head"><span class="nvim-mark">N</span><b>NEOVIM</b><small>SIDE EDITOR</small><i></i></div><div class="neovim-side-path">nvim ~/leon.profile</div><div class="neovim-side-code"><span>01</span> <b>-- quick edits</b><br><span>02</span> <em>local</em> leon = {}<br><span>03</span> <u>:w</u> <i class="mini-cursor"></i></div><div class="neovim-side-status"><b>NORMAL</b><span>leon.profile</span><span>lua</span></div></aside>
+        <aside class="neovim-side" aria-label="Neovim side editor"><div class="neovim-side-head"><span class="nvim-mark">N</span><b>NEOVIM</b><small>SIDE EDITOR</small><i></i></div><div class="neovim-side-path">nvim ~/.nvim/leon.profile</div><div class="neovim-side-code"><span>01</span> <b>-- quick edits</b><br><span>02</span> <em>local</em> leon = {}<br><span>03</span> <u>:w</u> <i class="mini-cursor"></i></div><div class="neovim-side-status"><b>NORMAL</b><span>leon.profile</span><span>lua</span></div></aside>
       </div>`;
   }
 
