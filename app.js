@@ -23,11 +23,11 @@
       <div class="editor-stage spotlight" data-tilt><div class="editor-window vscode-window">
         <div class="editor-titlebar">
           <div class="window-controls"><i></i><i></i><i></i></div>
-          <span class="editor-path">Visual Studio Code — <b>leon.profile.lua</b></span>
+          <span class="editor-path">Visual Studio Code — <b>~/leon.profile</b></span>
           <span class="editor-window-mark">⌘</span>
         </div>
-        <div class="editor-tabs"><span class="tab-active"><i class="file-glyph">L</i> leon.profile.lua</span><span><i class="file-glyph json">{ }</i> settings.json</span><span class="tab-end">+</span></div>
-        <div class="vscode-workspace"><aside class="vscode-activity" aria-hidden="true"><span class="activity-active">▤</span><span>⌕</span><span>⌑</span><span>◈</span><span class="activity-bottom">⚙</span></aside><aside class="vscode-explorer"><div class="explorer-heading">EXPLORER</div><div class="explorer-folder">⌄ PORTFOLIO</div><div class="explorer-file selected"><i>L</i> leon.profile.lua</div><div class="explorer-file"><i class="json">{ }</i> settings.json</div><div class="explorer-file"><i class="lua">L</i> init.lua</div></aside><div class="editor-buffer vscode-buffer" aria-label="Visual Studio Code Lua editor"><div class="breadcrumb">PORTFOLIO&nbsp; › &nbsp;leon.profile.lua</div>
+        <div class="editor-tabs"><span class="tab-active"><i class="file-glyph">L</i> leon.profile</span><span><i class="file-glyph json">{ }</i> settings.json</span><span class="tab-end">+</span></div>
+        <div class="vscode-workspace"><aside class="vscode-activity" aria-hidden="true"><span class="activity-active">▤</span><span>⌕</span><span>⌑</span><span>◈</span><span class="activity-bottom">⚙</span></aside><aside class="vscode-explorer"><div class="explorer-heading">EXPLORER</div><div class="explorer-folder">⌄ PORTFOLIO</div><div class="explorer-file selected"><i>L</i> leon.profile</div><div class="explorer-file"><i class="json">{ }</i> settings.json</div><div class="explorer-file"><i class="lua">L</i> init.lua</div></aside><div class="editor-buffer vscode-buffer" aria-label="Visual Studio Code Lua editor"><div class="breadcrumb">PORTFOLIO&nbsp; › &nbsp;leon.profile</div>
           ${rows}
           <div class="code-row cursor-row"><span class="line-number">15</span><code><span class="block-cursor"></span></code></div>
           <div class="code-row faint-row"><span class="line-number">16</span><code><span class="syntax-comment">~</span></code></div>
