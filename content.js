@@ -76,7 +76,8 @@ window.PORTFOLIO_CONTENT = {
       ],
       tech:["Rust","GTK4","Wayland","Arch Linux","Hyprland"],
       url:"https://github.com/Jackson4Rocks/GlyphOS",
-      preview:"glyph"
+      preview:"glyph",
+      previewNote:"Conceptual mock-up only — the final GlyphOS interface may look substantially different."
     },
     {
       number:"02",
