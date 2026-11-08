@@ -923,6 +923,28 @@ body{font-size:15px}
   .neovim-side-status{margin:4px -8px 0;padding:4px 6px;font-size:5px}
 }
 
+/* Final readability pass for editor text and the GlyphOS concept-preview note. */
+.vscode-buffer.editor-buffer{font-size:12px;line-height:1.95}
+.vscode-buffer .code-row{grid-template-columns:28px minmax(0,1fr);gap:10px}
+.vscode-buffer .code-row code{font-size:inherit}
+.vscode-explorer{font-size:8px}
+.explorer-heading{font-size:8px}
+.explorer-file{font-size:8px}
+.neovim-side-path{font-size:8px}
+.neovim-side-code{font-size:8px;line-height:1.9}
+.neovim-side-status{font-size:7px}
+.preview-disclaimer{position:absolute;z-index:4;left:15px;right:15px;bottom:11px;padding:8px 10px;border:1px solid rgba(255,255,255,.16);border-radius:6px;background:rgba(0,0,0,.84);color:#d4d4d4;font:8px/1.5 var(--font-mono);letter-spacing:.015em;text-align:center;backdrop-filter:blur(8px)}
+@media(max-width:640px){
+  .vscode-buffer.editor-buffer{font-size:7.4px;line-height:1.9}
+  .vscode-buffer .code-row{grid-template-columns:18px minmax(0,1fr);gap:5px}
+  .vscode-explorer{font-size:6px}
+  .explorer-heading{font-size:6px}
+  .explorer-file{font-size:6px}
+  .neovim-side-path{font-size:6.5px}
+  .neovim-side-code{font-size:6.5px;line-height:1.8}
+  .neovim-side-status{font-size:5.5px}
+  .preview-disclaimer{left:8px;right:8px;bottom:7px;padding:6px 7px;font-size:6.5px}
+}
 </style>
 </head>
 <body>
