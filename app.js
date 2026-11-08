@@ -272,7 +272,7 @@
       const y=window.scrollY||0;
       header.classList.toggle("scrolled",y>120);
       const heroTitle=document.querySelector(".hero-title");
-      const editor=document.querySelector(".editor-window");
+      const editor=document.querySelector(".editor-stage");
       if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
         if(heroTitle)heroTitle.style.transform="translate3d(0,"+(-y*.08)+"px,0)";
         if(editor)editor.style.transform="perspective(1200px) translate3d(0,"+(y*.04)+"px,0) rotateX("+editor.dataset.rx+"deg) rotateY("+editor.dataset.ry+"deg)";
