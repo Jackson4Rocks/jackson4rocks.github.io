@@ -151,6 +151,20 @@ body:after{content:"";position:fixed;z-index:99;left:0;top:0;width:100%;height:2
 @media(hover:hover) and (pointer:fine){.project{transition:transform .18s ease,border-color .22s,background .22s}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.system-card{translate:none}}
 
+
+/* Nothing Phone device spotlight */
+.device-spotlight{position:relative;display:grid;grid-template-columns:1fr .72fr;align-items:center;gap:20px;min-height:320px;margin-top:13px;padding:24px 34px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:radial-gradient(ellipse at 78% 50%,rgba(255,255,255,.045),transparent 45%),linear-gradient(115deg,#080808,#010101);transition:border-color .22s,transform .22s}
+.device-spotlight:hover{border-color:#3b3b3b;transform:translateY(-3px)}
+.device-spotlight:after{content:"";position:absolute;right:-120px;top:-230px;width:500px;height:500px;border:1px solid rgba(255,255,255,.07);border-radius:50%;box-shadow:0 0 0 45px rgba(255,255,255,.012),0 0 0 90px rgba(255,255,255,.009);pointer-events:none}
+.device-spotlight-copy{position:relative;z-index:2;padding:22px 0}
+.device-spotlight h3{margin:17px 0 12px;font-size:clamp(30px,4.5vw,53px);line-height:.92;letter-spacing:-.085em}
+.device-spotlight h3 span{color:#858585}
+.device-spotlight p{max-width:430px;margin:0;color:var(--muted);font-size:11px;line-height:1.9}
+.device-spotlight .focus-link{margin-top:20px}
+.device-spotlight-art{position:relative;z-index:1;display:grid;place-items:center;min-height:280px}
+.device-spotlight-art img{display:block;width:auto;height:280px;max-width:100%;object-fit:contain;filter:drop-shadow(0 22px 36px rgba(0,0,0,.8))}
+@media(max-width:650px){.device-spotlight{grid-template-columns:1fr;gap:0;padding:22px}.device-spotlight-copy{padding:8px 0 0}.device-spotlight-art{min-height:240px}.device-spotlight-art img{height:250px}}
+
 </style>
 </head>
 <body>
@@ -163,7 +177,7 @@ body:after{content:"";position:fixed;z-index:99;left:0;top:0;width:100%;height:2
     <div class="brand-copy"><strong>Leon Sony</strong><span>JACKSON4ROCKS</span></div>
   </a>
   <nav class="navlinks" aria-label="Primary navigation">
-    <a href="#focus" data-section-link="focus">Focus</a><a href="#projects" data-section-link="projects">Projects</a><a href="#lab" data-section-link="lab">Roadmap</a><a href="#stack" data-section-link="stack">Stack</a>
+    <a href="#focus" data-section-link="focus">Focus</a><a href="nothing-phone.html">Device</a><a href="#projects" data-section-link="projects">Projects</a><a href="#lab" data-section-link="lab">Roadmap</a><a href="#stack" data-section-link="stack">Stack</a>
     <a class="nav-cta" href="https://github.com/Jackson4Rocks" target="_blank" rel="noreferrer">GitHub <span class="arrow">↗</span></a>
   </nav>
 </header>
@@ -192,12 +206,12 @@ body:after{content:"";position:fixed;z-index:99;left:0;top:0;width:100%;height:2
         <div class="system-display editor-display"><div class="editor-code">
           <div class="code-line"><span class="line-no">01</span><span class="code-key">name</span><span class="code-eq"> = </span><span class="code-value">"Leon Sony"</span></div>
           <div class="code-line"><span class="line-no">02</span><span class="code-key">role</span><span class="code-eq"> = </span><span class="code-value">"Linux &amp; Android Dev"</span></div>
-          <div class="code-line"><span class="line-no">03</span><span class="code-key">os</span><span class="code-eq"> = </span><span class="code-value">"CachyOS Linux"</span></div>
+          <div class="code-line"><span class="line-no">03</span><span class="code-key">os</span><span class="code-eq"> = </span><span class="code-value">"Arch Linux"</span></div>
           <div class="code-line"><span class="line-no">04</span><span class="code-key">focus</span><span class="code-eq"> = </span><span class="code-value">["Android", "Systems"]</span></div>
           <div class="code-line"><span class="line-no">05</span><span class="code-key">motto</span><span class="code-eq"> = </span><span class="code-value">"build · break · fix"</span></div>
           <div class="code-line active"><span class="line-no">06</span><span class="cursor"></span></div>
         </div></div>
-        <div class="system-stats"><div class="system-stat"><small>OS</small><b>CachyOS Linux</b></div><div class="system-stat"><small>EDITOR</small><b>Neovim</b></div><div class="system-stat"><b></b></div></div>
+        <div class="system-stats"><div class="system-stat"><small>OS</small><b>Arch Linux</b></div><div class="system-stat"><small>EDITOR</small><b>Neovim</b></div><div class="system-stat"><b></b></div></div>
         <div class="system-foot"><span>~/.nvim/leon.profile</span><span class="live"></span></div>
       </div>
     </div>
@@ -211,8 +225,17 @@ body:after{content:"";position:fixed;z-index:99;left:0;top:0;width:100%;height:2
     <div class="section-head"><div><div class="section-index">01 / In focus</div><h2>What I'm<br>building now.</h2></div><p class="section-intro">A snapshot of the current work. Some pieces are already usable; others are in active development. Each project's repository is the source of truth for build and release status.</p></div>
     <div class="now-grid">
       <article class="focus-card"><div class="focus-top"><span>01 / Android launcher</span><span class="status">In development</span></div><h3>Cipher Launcher</h3><p>A compact Android launcher and lock-screen experience designed around small screens, separate protected spaces, and a clean, AMOLED-friendly interface.</p><div class="tags"><span>Android</span><span>Launcher</span><span>Lock screen</span><span>AMOLED</span></div><a class="focus-link" href="https://github.com/Jackson4Rocks/Cipher-Launcher" target="_blank" rel="noreferrer">Explore Cipher Launcher <span class="arrow">↗</span></a></article>
-      <article class="focus-card secondary"><div class="focus-top"><span>02 / Nothing Phone utility</span><span class="status">OneGlyph v2.0</span></div><h3>OneGlyph</h3><p>A utility for the single Glyph dot on the Nothing Phone (3a) Lite, bringing it to life with music reactions, notification cues, Morse code, timers, metronome, and charging feedback.</p><div class="tags"><span>Android</span><span>Nothing OS 2.0</span><span>Glyph</span></div><a class="focus-link" href="https://github.com/Jackson4Rocks/OneGlyph" target="_blank" rel="noreferrer">Explore OneGlyph <span class="arrow">↗</span></a></article>
+      <article class="focus-card secondary"><div class="focus-top"><span>02 / Nothing Phone utility</span><span class="status">OneGlyph v2.0</span></div><h3>OneGlyph</h3><p>A utility for the single Glyph dot on the Nothing Phone (3a) Lite, bringing it to life with music reactions, notification cues, Morse code, timers, metronome, and charging feedback.</p><div class="tags"><span>Android</span><span>Nothing OS 2.0</span><span>Glyph</span></div><a class="focus-link" href="nothing-phone.html">Explore device &amp; OneGlyph <span class="arrow">↗</span></a></article>
     </div>
+    <a class="device-spotlight" href="nothing-phone.html" aria-label="Explore the Nothing Phone (3a) Lite device page">
+      <div class="device-spotlight-copy">
+        <div class="section-index">Device spotlight / Nothing Phone</div>
+        <h3>NOTHING PHONE<br><span>(3a) LITE</span></h3>
+        <p>The device behind OneGlyph. Explore the rear design, the single Glyph dot, and the software built around it.</p>
+        <span class="focus-link">Explore the device <span class="arrow">↗</span></span>
+      </div>
+      <div class="device-spotlight-art"><img src="assets/nothing-phone-3a-lite.svg" alt="Rear view of the Nothing Phone (3a) Lite" loading="lazy"></div>
+    </a>
   </section>
 
   <section id="projects" class="section reveal">
@@ -246,7 +269,7 @@ body:after{content:"";position:fixed;z-index:99;left:0;top:0;width:100%;height:2
   <section id="stack" class="section reveal">
     <div class="section-head"><div><div class="section-index">04 / Workbench</div><h2>The tools<br>behind it.</h2></div><p class="section-intro">A practical toolbox for app development, Linux customisation, and debugging systems when the easy layer isn't enough.</p></div>
     <div class="stack-layout">
-      <article class="stack-card"><h3>Environment</h3><div class="stack-list"><div class="stack-item"><small>Editor</small><b>VS Code / Neovim</b></div><div class="stack-item"><small>Operating system</small><b>CachyOS Linux</b></div><div class="stack-item"><small>Terminal</small><b>Fish + custom config</b></div><div class="stack-item"><small>Version control</small><b>Git + GitHub</b></div></div></article>
+      <article class="stack-card"><h3>Environment</h3><div class="stack-list"><div class="stack-item"><small>Editor</small><b>VS Code / Neovim</b></div><div class="stack-item"><small>Operating system</small><b>Arch Linux</b></div><div class="stack-item"><small>Terminal</small><b>Fish + custom config</b></div><div class="stack-item"><small>Version control</small><b>Git + GitHub</b></div></div></article>
       <article class="stack-card"><h3>Languages, platforms & frameworks</h3><div class="stack-pills"><span>Kotlin</span><span>Java</span><span>Jetpack Compose</span><span>Android</span><span>Android TV</span><span>AOSP</span><span>Rust</span><span>C / C++</span><span>Python</span><span>Shell</span><span>Arch Linux</span><span>Wayland</span><span>Hyprland</span><span>GTK4</span><span>Gradle</span><span>CMake</span><span>Git</span></div><div class="stack-note">I like software that connects the interface to the system underneath — even when it means reading logs, tracing a bug, and learning a new layer the hard way.</div></article>
     </div>
   </section>
