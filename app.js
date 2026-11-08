@@ -130,6 +130,7 @@
       <div class="feature-preview spotlight" data-preview="${esc(project.preview)}">
         <div class="preview-index">${esc(project.number)} / PREVIEW</div>
         ${preview}
+        ${project.previewNote ? `<div class="preview-disclaimer">${esc(project.previewNote)}</div>` : ""}
         <a class="preview-open" href="${esc(project.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(project.name)} repository">${arrow()}</a>
       </div>
     </article>`;
@@ -199,7 +200,7 @@
 
       <main id="main" class="wrap">
         <section class="hero" id="top" aria-labelledby="hero-title">
-          <div class="hero-meta-row"><span>Portfolio — Ed. 2026</span><i></i><span>Index / 00</span><i></i><span>Linux · Android · Systems</span></div>
+          <div class="hero-meta-row"><span>Index / 00</span><i></i><span>Linux · Android · Systems</span></div>
           <div class="hero-grid">
             <div class="hero-copy">
               <h1 id="hero-title" class="hero-title"><span class="title-mask"><span>nvim</span></span><span class="title-mask sony"><span>~/leon.</span></span><span class="title-mask sony command-third"><span>profile</span></span></h1>
