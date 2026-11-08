@@ -30,10 +30,10 @@
         <div class="vscode-workspace"><aside class="vscode-activity" aria-hidden="true"><span class="activity-active">▤</span><span>⌕</span><span>⌑</span><span>◈</span><span class="activity-bottom">⚙</span></aside><aside class="vscode-explorer"><div class="explorer-heading">EXPLORER</div><div class="explorer-folder">⌄ PORTFOLIO</div><div class="explorer-file selected"><i>L</i> leon.profile.lua</div><div class="explorer-file"><i class="json">{ }</i> settings.json</div><div class="explorer-file"><i class="lua">L</i> init.lua</div></aside><div class="editor-buffer vscode-buffer" aria-label="Visual Studio Code Lua editor"><div class="breadcrumb">PORTFOLIO&nbsp; › &nbsp;leon.profile.lua</div>
           ${rows}
           <div class="code-row cursor-row"><span class="line-number">15</span><code><span class="block-cursor"></span></code></div>
-          <div class="code-row faint-row"><span class="line-number">17</span><code><span class="syntax-comment">~</span></code></div>
           <div class="code-row faint-row"><span class="line-number">16</span><code><span class="syntax-comment">~</span></code></div>
+          <div class="code-row faint-row"><span class="line-number">17</span><code><span class="syntax-comment">~</span></code></div>
         </div>
-        </div></div><div class="editor-statusline vscode-statusline"><span class="status-branch">⑂ main</span><span>✓ 0 errors</span><span class="status-spacer"></span><span>Ln 14, Col 1</span><span>Spaces: 2</span><span>UTF-8</span><span>Lua</span></div>
+        </div><div class="editor-statusline vscode-statusline"><span class="status-branch">⑂ main</span><span>✓ 0 errors</span><span class="status-spacer"></span><span>Ln 14, Col 1</span><span>Spaces: 2</span><span>UTF-8</span><span>Lua</span></div>
       </div>
         <aside class="neovim-side" aria-label="Neovim side editor"><div class="neovim-side-head"><span class="nvim-mark">N</span><b>NEOVIM</b><small>SIDE EDITOR</small><i></i></div><div class="neovim-side-path">nvim ~/.nvim/leon.profile</div><div class="neovim-side-code"><span>01</span> <b>-- quick edits</b><br><span>02</span> <em>local</em> leon = {}<br><span>03</span> <u>:w</u> <i class="mini-cursor"></i></div><div class="neovim-side-status"><b>NORMAL</b><span>leon.profile</span><span>lua</span></div></aside>
       </div>`;
