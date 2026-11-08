@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Nothing Phone (3a) Lite — a device feature by Leon Sony, with the OneGlyph project built for its single Glyph light.">
+<meta name="author" content="Leon Sony">
+<title>Nothing Phone (3a) Lite — Leon Sony</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--black:#000;--surface:#070707;--surface2:#0c0c0c;--white:#f5f5f5;--muted:#999;--dim:#666;--line:#202020;--line2:#303030;--accent:#f2f2f2;--red:#d92d35;--mono:"DM Mono",ui-monospace,monospace;--sans:Manrope,system-ui,sans-serif;--max:1240px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{margin:0;background:#000;color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:10;pointer-events:none;opacity:.018;background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(#000,transparent 85%)}
+::selection{background:#f4f4f4;color:#000}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.shell{width:min(var(--max),calc(100% - 36px));margin:14px auto 0}
+.mono{font-family:var(--mono)}
+.nav{position:sticky;top:12px;z-index:20;min-height:66px;padding:8px 10px 8px 14px;display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid var(--line);border-radius:17px;background:rgba(0,0,0,.86);backdrop-filter:blur(18px);box-shadow:0 12px 45px rgba(0,0,0,.45)}
+.brand{display:flex;align-items:center;gap:11px;min-width:190px}
+.brand-mark{width:38px;height:38px;display:grid;place-items:center;border:1px solid #333;border-radius:11px;background:#090909;color:#fff;font:12px var(--mono)}
+.brand-copy strong{display:block;font-size:12px;letter-spacing:-.03em}
+.brand-copy small{display:block;margin-top:3px;color:var(--dim);font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:10px 12px;border-radius:999px;color:#999;font-size:10px;font-weight:800;transition:background .2s,color .2s}
+.nav-links a:hover{background:#111;color:#fff}
+.nav-links .nav-cta{background:#f1f1f1;color:#050505;padding-inline:15px}
+.nav-links .nav-cta:hover{background:#fff;color:#000}
+.hero{position:relative;display:grid;grid-template-columns:1fr .88fr;gap:20px;align-items:center;min-height:690px;margin-top:10px;padding:55px 5.2% 58px;overflow:hidden;border:1px solid var(--line);border-radius:27px;background:#000;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 74% 48%,rgba(255,255,255,.075),transparent 43%),linear-gradient(135deg,#050505,#000 65%)}
+.hero:after{content:"";position:absolute;z-index:-1;right:-250px;top:-310px;width:710px;height:710px;border:1px solid rgba(255,255,255,.07);border-radius:50%;box-shadow:0 0 0 55px rgba(255,255,255,.012),0 0 0 115px rgba(255,255,255,.01)}
+.hero-copy{position:relative;z-index:2;max-width:620px;padding:25px 0}
+.eyebrow{display:flex;align-items:center;gap:10px;color:#999;font:9px var(--mono);letter-spacing:.16em;text-transform:uppercase}
+.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:#eee;box-shadow:0 0 13px rgba(255,255,255,.65)}
+.hero h1{margin:29px 0 24px;font-size:clamp(57px,7.1vw,96px);line-height:.84;letter-spacing:-.095em;font-weight:800}
+.hero h1 span{display:block;color:#777}
+.hero p{max-width:480px;margin:0;color:#a1a1a1;font-size:13px;line-height:2}
+.hero-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:0 16px;border:1px solid #303030;border-radius:10px;background:#090909;color:#eee;font-size:10px;font-weight:800;transition:transform .2s,border-color .2s,background .2s}
+.button:hover{transform:translateY(-2px);border-color:#666;background:#111}
+.button.primary{background:#f1f1f1;border-color:#f1f1f1;color:#050505}
+.button.primary:hover{background:#fff}
+.arrow{font-size:15px;line-height:1}
+.hero-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:35px;color:#777;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.hero-meta span{display:flex;align-items:center;gap:8px}
+.hero-meta span:before{content:"";width:4px;height:4px;background:#ddd;border-radius:50%}
+.product-stage{position:relative;display:grid;place-items:center;min-height:560px;isolation:isolate}
+.product-stage:before{content:"";position:absolute;z-index:-1;width:min(88%,440px);aspect-ratio:1;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 32px rgba(255,255,255,.018),0 0 0 74px rgba(255,255,255,.012),inset 0 0 60px rgba(255,255,255,.02)}
+.product-stage:after{content:"";position:absolute;z-index:-1;width:50%;height:78%;background:radial-gradient(ellipse,rgba(255,255,255,.11),transparent 68%);filter:blur(36px)}
+.product-stage img{display:block;width:auto;height:min(72vh,620px);max-width:100%;object-fit:contain;filter:drop-shadow(0 32px 54px rgba(0,0,0,.85));animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.stage-label{position:absolute;right:0;bottom:34px;color:#696969;font:8px var(--mono);letter-spacing:.14em;text-transform:uppercase;writing-mode:vertical-rl}
+.hero-foot{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:12px 2px 0;padding:13px 0;border-bottom:1px solid var(--line);color:#696969;font:8px var(--mono);letter-spacing:.13em;text-transform:uppercase}
+.hero-foot strong{color:#c8c8c8;font-weight:400}
+.section{padding:105px 0 0}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:30px}
+.section-index{margin-bottom:14px;color:#888;font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase}
+.section h2{margin:0;font-size:clamp(38px,5.8vw,70px);line-height:.94;letter-spacing:-.08em;font-weight:800}
+.section-intro{max-width:410px;margin:0 0 3px;color:var(--muted);font-size:12px;line-height:1.95}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.story-card{position:relative;min-height:225px;padding:26px;overflow:hidden;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#0a0a0a,#030303)}
+.story-card:after{content:"";position:absolute;right:-70px;bottom:-120px;width:230px;height:230px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 26px rgba(255,255,255,.018),0 0 0 58px rgba(255,255,255,.012)}
+.story-tag{color:#888;font:8px var(--mono);letter-spacing:.15em;text-transform:uppercase}
+.story-card h3{position:relative;z-index:1;margin:31px 0 10px;font-size:27px;letter-spacing:-.065em}
+.story-card p{position:relative;z-index:1;max-width:440px;margin:0;color:#999;font-size:11px;line-height:1.9}
+.glyph-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px}
+.glyph-note{padding:28px;border:1px solid var(--line);border-radius:17px;background:#050505}
+.glyph-note h3{margin:0 0 13px;font-size:23px;letter-spacing:-.06em}
+.glyph-note p{margin:0;color:#999;font-size:11px;line-height:1.95}
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.feature{display:flex;align-items:center;gap:11px;min-height:65px;padding:13px;border:1px solid var(--line);border-radius:11px;background:#070707;color:#d1d1d1;font-size:10px;font-weight:700}
+.feature-no{width:27px;height:27px;flex:0 0 27px;display:grid;place-items:center;border:1px solid #333;border-radius:8px;color:#aaa;font:8px var(--mono)}
+.project-panel{display:grid;grid-template-columns:1fr auto;align-items:center;gap:25px;padding:32px;border:1px solid #2c2c2c;border-radius:18px;background:linear-gradient(120deg,#0b0b0b,#030303)}
+.project-kicker{color:#888;font:8px var(--mono);letter-spacing:.15em;text-transform:uppercase}
+.project-panel h3{margin:16px 0 9px;font-size:clamp(31px,4vw,47px);letter-spacing:-.075em}
+.project-panel p{max-width:580px;margin:0;color:#999;font-size:11px;line-height:1.9}
+.project-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px}
+.project-version{align-self:start;padding:8px 10px;border:1px solid #313131;border-radius:99px;color:#c7c7c7;font:8px var(--mono);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.device-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+.fact{padding:18px;border:1px solid var(--line);border-radius:12px;background:#050505}
+.fact small{display:block;color:#777;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.fact strong{display:block;margin-top:9px;color:#e5e5e5;font-size:12px}
+.footer{display:flex;justify-content:space-between;gap:18px;margin-top:100px;padding:23px 2px 28px;border-top:1px solid var(--line);color:#6d6d6d;font:8px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.footer a:hover{color:#fff}
+@keyframes rise{from{opacity:0;transform:translateY(20px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:850px){.hero{grid-template-columns:1fr .8fr;padding-inline:4%;min-height:610px}.hero h1{font-size:clamp(55px,8vw,78px)}.product-stage{min-height:480px}.product-stage img{height:min(66vh,540px)}.nav-links a{padding-inline:9px}}
+@media(max-width:650px){.shell{width:calc(100% - 22px);margin-top:10px}.nav{min-height:58px;border-radius:14px;padding:7px 8px}.brand{min-width:0}.brand-mark{width:35px;height:35px}.brand-copy small{font-size:7px}.nav-links a:not(.nav-cta){display:none}.nav-links .nav-cta{font-size:9px}.hero{display:flex;flex-direction:column;gap:0;min-height:0;padding:30px 22px 25px;border-radius:20px}.hero-copy{padding:12px 0 0}.hero h1{margin:23px 0 17px;font-size:clamp(53px,15vw,75px)}.hero p{font-size:12px}.product-stage{order:-1;width:100%;min-height:0;height:430px;margin:-5px 0 6px}.product-stage img{height:410px;max-width:92%}.product-stage:before{width:76%}.stage-label{right:0;bottom:20px;font-size:7px}.hero-meta{margin-top:24px;gap:12px}.hero-foot{font-size:7px}.section{padding-top:74px}.section-head{display:block;margin-bottom:22px}.section-intro{margin-top:17px}.story-grid,.glyph-layout{grid-template-columns:1fr}.story-card{min-height:190px}.feature-grid{grid-template-columns:1fr 1fr}.project-panel{grid-template-columns:1fr;padding:23px}.project-version{grid-row:1}.device-facts{grid-template-columns:1fr}.footer{margin-top:70px;flex-direction:column}}
+@media(max-width:380px){.feature-grid{grid-template-columns:1fr}.product-stage{height:385px}.product-stage img{height:370px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Leon Sony home">
+    <span class="brand-mark">LS</span>
+    <span class="brand-copy"><strong>Leon Sony</strong><small>Open Source Studio</small></span>
+  </a>
+  <nav class="nav-links" aria-label="Page navigation">
+    <a href="index.html">Portfolio</a>
+    <a href="#oneglyph">OneGlyph</a>
+    <a class="nav-cta" href="https://github.com/Jackson4Rocks/OneGlyph" target="_blank" rel="noreferrer">Source ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-copy">
+      <div class="eyebrow">Device spotlight / 01</div>
+      <h1 id="page-title">NOTHING<br><span>PHONE (3a) LITE</span></h1>
+      <p>A closer look at the device behind OneGlyph — a dark, industrial design with one small Glyph light that becomes the focus of a set of useful, playful interactions.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#oneglyph">Discover OneGlyph <span class="arrow">↓</span></a>
+        <a class="button" href="https://github.com/Jackson4Rocks/OneGlyph" target="_blank" rel="noreferrer">View source <span class="arrow">↗</span></a>
+      </div>
+      <div class="hero-meta"><span>Nothing Phone (3a) Lite</span><span>Single Glyph dot</span><span>OneGlyph v2.0</span></div>
+    </div>
+    <div class="product-stage">
+      <img src="assets/nothing-phone-3a-lite.svg" alt="Rear view of the dark Nothing Phone (3a) Lite, showing its camera layout and textured back panel" fetchpriority="high">
+      <span class="stage-label">Rear design / device view</span>
+    </div>
+  </section>
+  <div class="hero-foot"><span>Leon Sony / Device study</span><strong>Hardware × software</strong><span>01 — 03</span></div>
+
+  <section class="section" id="design">
+    <div class="section-head">
+      <div><div class="section-index">01 / The device</div><h2>Industrial by<br>intention.</h2></div>
+      <p class="section-intro">The rear layout is the visual identity: camera elements, a broad textured panel, small hardware details, and the restrained red accent. The page keeps the device itself in focus.</p>
+    </div>
+    <div class="story-grid">
+      <article class="story-card"><div class="story-tag">01 / Form</div><h3>Dark, detailed, deliberate.</h3><p>A close-up presentation of the rear finish and its individual components, kept against a true-black canvas so the device feels part of the page.</p></article>
+      <article class="story-card"><div class="story-tag">02 / Interface</div><h3>One light. Many signals.</h3><p>The single rear Glyph dot is the small hardware detail that connects the phone to the OneGlyph software project.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="oneglyph">
+    <div class="section-head">
+      <div><div class="section-index">02 / Software companion</div><h2>One dot.<br>More possibilities.</h2></div>
+      <p class="section-intro">OneGlyph is a utility project for the single Glyph light on the Nothing Phone (3a) Lite. It explores small interactions that make the rear light useful beyond decoration.</p>
+    </div>
+    <div class="glyph-layout">
+      <article class="glyph-note">
+        <div class="project-kicker">OneGlyph / v2.0</div>
+        <h3>Bringing the Glyph to life.</h3>
+        <p>Music reactions, notification cues, Morse code, timers, a metronome, and charging feedback — with compact tools designed around the phone's single Glyph dot.</p>
+        <div class="project-links">
+          <a class="button primary" href="https://github.com/Jackson4Rocks/OneGlyph" target="_blank" rel="noreferrer">Explore OneGlyph <span class="arrow">↗</span></a>
+          <a class="button" href="index.html">Back to portfolio <span class="arrow">↗</span></a>
+        </div>
+      </article>
+      <div class="feature-grid" aria-label="OneGlyph capabilities">
+        <div class="feature"><span class="feature-no">01</span>Music reactions</div>
+        <div class="feature"><span class="feature-no">02</span>Notification cues</div>
+        <div class="feature"><span class="feature-no">03</span>Morse code</div>
+        <div class="feature"><span class="feature-no">04</span>Timers</div>
+        <div class="feature"><span class="feature-no">05</span>Metronome</div>
+        <div class="feature"><span class="feature-no">06</span>Charging feedback</div>
+        <div class="feature"><span class="feature-no">07</span>Low-battery alerts</div>
+        <div class="feature"><span class="feature-no">08</span>Camera countdown</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="details">
+    <div class="section-head">
+      <div><div class="section-index">03 / At a glance</div><h2>Device &<br>project.</h2></div>
+      <p class="section-intro">A compact reference for the hardware and the software work connected to it. No unverified benchmark or hardware numbers — just the known project context.</p>
+    </div>
+    <div class="device-facts">
+      <div class="fact"><small>Device</small><strong>Nothing Phone (3a) Lite</strong></div>
+      <div class="fact"><small>Hardware focus</small><strong>Single rear Glyph light</strong></div>
+      <div class="fact"><small>Software project</small><strong>OneGlyph v2.0</strong></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><span>© <span id="year">2026</span> Leon Sony · Jackson4Rocks</span><a href="https://github.com/Jackson4Rocks" target="_blank" rel="noreferrer">Open source, where possible ↗</a></footer>
+</div>
+<script>document.getElementById("year").textContent=String(new Date().getFullYear());</script>
+</body>
+</html>
