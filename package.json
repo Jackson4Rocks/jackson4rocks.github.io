@@ -1,0 +1,7 @@
+{
+  "name": "leon-sony-portfolio",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
