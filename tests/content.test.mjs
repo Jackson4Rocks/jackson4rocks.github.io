@@ -39,3 +39,11 @@ test("accessibility and reduced-motion support are present", () => {
   assert.match(app, /Escape/);
   assert.match(html, /prefers-reduced-motion:reduce/);
 });
+
+
+test("the VS Code profile file is displayed as ~/leon.profile without a Lua extension", () => {
+  assert.match(content, /-- ~\/leon\.profile/);
+  assert.doesNotMatch(content, /leon\.profile\.lua/);
+  assert.match(app, /Visual Studio Code — <b>~\/leon\.profile<\/b>/);
+  assert.doesNotMatch(app, /leon\.profile\.lua/);
+});
