@@ -23,17 +23,19 @@
       <div class="editor-window spotlight" data-tilt>
         <div class="editor-titlebar">
           <div class="window-controls"><i></i><i></i><i></i></div>
-          <span class="editor-path">nvim — ~/.nvim/<b>leon.profile</b></span>
+          <span class="editor-path">Visual Studio Code — <b>leon.profile.lua</b></span>
           <span class="editor-window-mark">⌘</span>
         </div>
-        <div class="editor-tabs"><span class="tab-active">● leon.profile</span><span>init.lua</span><span class="tab-end">+</span></div>
-        <div class="editor-buffer" aria-label="Neovim Lua profile editor">
+        <div class="editor-tabs"><span class="tab-active"><i class="file-glyph">L</i> leon.profile.lua</span><span><i class="file-glyph json">{ }</i> settings.json</span><span class="tab-end">+</span></div>
+        <div class="vscode-workspace"><aside class="vscode-activity" aria-hidden="true"><span class="activity-active">▤</span><span>⌕</span><span>⌑</span><span>◈</span><span class="activity-bottom">⚙</span></aside><aside class="vscode-explorer"><div class="explorer-heading">EXPLORER</div><div class="explorer-folder">⌄ PORTFOLIO</div><div class="explorer-file selected"><i>L</i> leon.profile.lua</div><div class="explorer-file"><i class="json">{ }</i> settings.json</div><div class="explorer-file"><i class="lua">L</i> init.lua</div></aside><div class="editor-buffer vscode-buffer" aria-label="Visual Studio Code Lua editor"><div class="breadcrumb">PORTFOLIO&nbsp; › &nbsp;leon.profile.lua</div>
           ${rows}
           <div class="code-row cursor-row"><span class="line-number">14</span><code><span class="block-cursor"></span></code></div>
           <div class="code-row faint-row"><span class="line-number">15</span><code><span class="syntax-comment">~</span></code></div>
           <div class="code-row faint-row"><span class="line-number">16</span><code><span class="syntax-comment">~</span></code></div>
         </div>
-        <div class="editor-statusline"><span class="mode-block">NORMAL</span><span>leon.profile</span><span class="status-spacer"></span><span>lua</span><span>utf-8</span><span>14:12</span></div>
+        </div></div><div class="editor-statusline vscode-statusline"><span class="status-branch">⑂ main</span><span>✓ 0 errors</span><span class="status-spacer"></span><span>Ln 14, Col 1</span><span>Spaces: 2</span><span>UTF-8</span><span>Lua</span></div>
+      </div>
+        <aside class="neovim-side" aria-label="Neovim side editor"><div class="neovim-side-head"><span class="nvim-mark">N</span><b>NEOVIM</b><small>SIDE EDITOR</small><i></i></div><div class="neovim-side-path">nvim ~/.nvim/leon.profile</div><div class="neovim-side-code"><span>01</span> <b>-- quick edits</b><br><span>02</span> <em>local</em> leon = {}<br><span>03</span> <u>:w</u> <i class="mini-cursor"></i></div><div class="neovim-side-status"><b>NORMAL</b><span>leon.profile</span><span>lua</span></div></aside>
       </div>`;
   }
 
@@ -200,7 +202,7 @@
           <div class="hero-meta-row"><span>Portfolio — Ed. 2026</span><i></i><span>Index / 00</span><i></i><span>Linux · Android · Systems</span></div>
           <div class="hero-grid">
             <div class="hero-copy">
-              <h1 id="hero-title" class="hero-title"><span class="title-mask"><span>Leon</span></span><span class="title-mask sony"><span>Sony</span></span></h1>
+              <h1 id="hero-title" class="hero-title"><span class="title-mask"><span>nvim</span></span><span class="title-mask sony"><span>~/leon.</span></span><span class="title-mask sony command-third"><span>profile</span></span></h1>
               <div class="hello-row"><span>↳ Hello</span><p>I'm Leon — a developer working across <b>Linux and Android</b>. I build apps, desktop environments, Android TV experiences and low-level experiments, and I like making software feel right <em>from the surface down.</em></p></div>
               <div class="hero-actions"><a class="pill-button white" href="#work">Selected work ${arrow(true)}</a>${external(C.identity.github,"github.com/Jackson4Rocks "+arrow(),"pill-button outline")}</div>
               <div class="hero-offline"><span class="breathing-ring"></span><span>${esc(C.identity.offline)}</span></div>
@@ -211,7 +213,7 @@
                 <div><small>Status</small><b><i class="tiny-dot"></i>offline</b></div>
                 <div><small>Returns</small><b>March 2027</b></div>
                 <div><small>OS</small><b>Arch Linux</b></div>
-                <div><small>Editor</small><b>Neovim</b></div>
+                <div><small>Editor</small><b>Visual Studio Code</b></div>
               </div>
             </div>
           </div>
