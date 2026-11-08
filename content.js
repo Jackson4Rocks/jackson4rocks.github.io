@@ -131,6 +131,7 @@ window.PORTFOLIO_CONTENT = {
   moreApps: [
     {
       name:"Oryn Player",
+      url:"https://github.com/Jackson4Rocks/Oryn-Player",
       kind:"Android · Local music",
       status:"UI prototype",
       description:"A local-first music player with a calm, expressive Compose interface. The UI is in place; MediaStore scanning and real playback are next.",
@@ -139,6 +140,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       name:"AppGuard",
+      url:"https://github.com/Jackson4Rocks/AppGuard",
       kind:"Android · App security",
       status:"Builds via Actions",
       description:"A lightweight app locker. Pick apps to protect behind a PIN or your device's fingerprint / face authentication.",
@@ -147,6 +149,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       name:"Aevum Clock",
+      url:"https://github.com/Jackson4Rocks/Aevum-Clock",
       kind:"Android · Clock",
       status:"v1.0",
       solidStatus:true,
@@ -156,6 +159,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       name:"AvenueBoot",
+      url:"https://github.com/Jackson4Rocks/AvenueBoot",
       kind:"Linux · CLI tool",
       status:"Completed",
       solidStatus:true,
