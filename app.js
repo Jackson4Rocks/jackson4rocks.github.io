@@ -144,7 +144,7 @@
     return `<article class="app-card app-span-${i===0?7:i===1?5:i===2?5:7}" data-reveal>
       <div class="app-copy">
         <div class="app-top"><span>${esc(project.kind)}</span><span class="status-tag ${project.solidStatus?"solid":""}">${project.solidStatus?"":'<i></i>'}${esc(project.status)}</span></div>
-        <h4>${esc(project.name)}<a href="${project.art==="terminal"?"https://github.com/Jackson4Rocks/AvenueBoot":project.art==="clock"?"https://github.com/Jackson4Rocks/Aevum-Clock":project.art==="shield"?"https://github.com/Jackson4Rocks/AppGuard":"https://github.com/Jackson4Rocks/Oryn-Player"}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(project.name)} repository">${arrow()}</a></h4>
+        <h4>${esc(project.name)}<a href="${esc(project.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(project.name)} repository">${arrow()}</a></h4>
         <p>${esc(project.description)}</p>
         <div class="app-tech">${project.tech.map(esc).join(" · ")}</div>
       </div>
