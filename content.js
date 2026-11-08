@@ -11,7 +11,7 @@ window.PORTFOLIO_CONTENT = {
     intro: "I'm Leon — a developer working across Linux and Android. I build apps, desktop environments, Android TV experiences and low-level experiments, and I like making software feel right from the surface down.",
     marquee: ["Linux", "Android", "Low-level", "Open source", "Wayland", "Android TV", "System tooling", "Desktop environments"],
     editor: [
-      { kind:"comment", text:"-- ~/leon.profile.lua" },
+      { kind:"comment", text:"-- ~/leon.profile" },
       { kind:"keyword", text:"local", key:"leon", suffix:" = {" },
       { kind:"field", key:"name", value:'"Leon Sony"', comma:true },
       { kind:"field", key:"handle", value:'"Jackson4Rocks"', comma:true },
