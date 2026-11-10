@@ -491,7 +491,16 @@ section{scroll-margin-top:115px}
 .contact-grid b{display:flex;align-items:center;gap:8px;color:#ddd;font-size:10px;font-weight:500}
 .contact-grid a:hover b{color:#fff}
 .contact-grid .tiny-dot{width:6px;height:6px}
-.site-footer{padding-top:90px}
+.contribution-section{padding-top:104px}
+ .contribution-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}
+ .contribution-heading h2{margin:14px 0 0;font-size:clamp(34px,4.4vw,56px);font-weight:500;letter-spacing:-.07em}
+ .contribution-heading h2 em{font-family:var(--font-serif);font-weight:400;color:#ccc}
+ .contribution-heading>a{display:inline-flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid var(--border-strong);border-radius:999px;color:#ccc;font-size:10px;white-space:nowrap;transition:background .25s,color .25s}
+ .contribution-heading>a:hover{background:#fff;color:#000}
+ .contribution-graph{display:block;overflow:hidden;border:1px solid #252525;border-radius:12px;background:#0d1117;box-shadow:0 18px 55px rgba(0,0,0,.45)}
+ .contribution-graph img{display:block;width:100%;height:auto;min-height:80px;object-fit:contain}
+ .contribution-caption{margin:12px 2px 0;color:#777;font:9px var(--font-mono);letter-spacing:.04em}
+ .site-footer{padding-top:90px}
 .footer-wordmark{margin:0 0 24px;color:#151515;font-size:clamp(100px,23vw,320px);font-weight:600;line-height:.72;letter-spacing:-.11em;white-space:nowrap;overflow:hidden;user-select:none}
 .footer-wordmark em{font-family:var(--font-serif);font-weight:400}
 .footer-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0 24px;border-top:1px solid var(--border);color:#777;font:8px var(--font-mono);letter-spacing:.04em}
@@ -864,6 +873,11 @@ body{font-size:15px}
   .contact-main>div>p{font-size:10px}
   .contact-email{font-size:clamp(21px,5.2vw,31px)}
   .contact-email b{width:39px;height:39px}
+  .contribution-section{padding-top:76px}
+  .contribution-heading{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:18px}
+  .contribution-heading h2{font-size:clamp(30px,8vw,42px)}
+  .contribution-graph{border-radius:8px}
+  .contribution-caption{font-size:8px}
   .site-footer{padding-top:68px}
   .footer-wordmark{font-size:24vw}
   .footer-bar{font-size:7px}
