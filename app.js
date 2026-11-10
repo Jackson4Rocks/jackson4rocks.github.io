@@ -273,6 +273,19 @@
           </div>
         </section>
       </main>
+      <section class="contribution-section wrap" aria-labelledby="contributions-title">
+        <div class="contribution-heading">
+          <div>
+            <div class="micro-label">05 / GitHub activity</div>
+            <h2 id="contributions-title">Commits, <em>one dot at a time.</em></h2>
+          </div>
+          <a href="https://github.com/Jackson4Rocks" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+        </div>
+        <a class="contribution-graph" href="https://github.com/Jackson4Rocks" target="_blank" rel="noopener noreferrer" aria-label="View Leon's GitHub contribution history">
+          <img src="https://raw.githubusercontent.com/Jackson4Rocks/Jackson4Rocks/output/pacman-contribution-graph-dark.svg" alt="Animated Pac-Man contribution graph showing GitHub contribution activity" loading="lazy" decoding="async">
+        </a>
+        <p class="contribution-caption">A little record of the things built, fixed, and pushed.</p>
+      </section>
       <footer class="site-footer wrap"><div class="footer-wordmark">Leon <em>Sony</em></div><div class="footer-bar"><span>© 2026 Leon Sony · Jackson4Rocks</span><span>${esc(C.footer)}</span><a href="#top">Back to top ↑</a></div></footer>`;
   }
 
