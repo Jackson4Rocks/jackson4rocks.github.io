@@ -180,10 +180,6 @@
     root.innerHTML=`
       <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header" id="site-header">
-        <div class="intro-strip wrap">
-          <div><span class="breathing-ring"></span><strong>Independent developer</strong><span class="intro-dash">—</span><span>Android apps · Linux software · open source</span></div>
-          <small>Projects and source code on GitHub</small>
-        </div>
         <nav class="main-nav wrap" aria-label="Main navigation">
           <a class="brand" href="#top" aria-label="Leon Sony home">
             <img src="https://avatars.githubusercontent.com/u/192235822?v=4&s=180" alt="" width="36" height="36">
