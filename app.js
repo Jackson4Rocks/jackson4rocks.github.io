@@ -116,24 +116,8 @@
   }
 
   function retroPreview(){
-    return `<div class="preview-shell preview-retro">
-      <div class="retro-desktop">
-        <div class="retro-shortcuts">
-          <div><i>PC</i><span>My Computer</span></div>
-          <div><i>NET</i><span>Network</span></div>
-          <div><i>PAINT</i><span>Paint</span></div>
-          <div><i>GAMES</i><span>Games</span></div>
-        </div>
-        <div class="retro-window">
-          <div class="retro-window-head"><b>Welcome to Retro98</b><span>— □ ×</span></div>
-          <div class="retro-window-body"><span class="retro-window-mark">98</span><div><b>Your desktop, reimagined.</b><small>Classic apps and games on Android.</small></div></div>
-          <div class="retro-window-foot"><span>Ready</span><span>Retro98 v1.0</span></div>
-        </div>
-        <div class="retro-taskbar"><b><i>▦</i> Start</b><span>Welcome to Retro98</span><small>10:08</small></div>
-      </div>
-    </div>`;
+    return `<img class="retro98-screenshot" src="assets/retro98-showcase.webp" alt="Retro98 shown running with the Windows 98 desktop, About Windows dialog, MS-DOS Prompt and browser window" loading="lazy" decoding="async">`;
   }
-
   function featureMarkup(project,i){
     const preview={glyph:glyphPreview,cipher:cipherPreview,oneglyph:oneGlyphPreview,tv:tvPreview,retro:retroPreview}[project.preview]();
     return `<article class="feature-row ${i%2?"reverse":""}" data-reveal>
