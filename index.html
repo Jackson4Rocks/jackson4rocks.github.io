@@ -93,11 +93,11 @@ a:hover .arrow-icon:where(:not(.down)){color:#fff}
 .spotlight:before{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.07),transparent 72%);opacity:0;transition:opacity .35s}
 .spotlight:hover:before{opacity:1}
 .site-header{position:sticky;z-index:100;top:0;padding-top:10px;margin-bottom:0}
-.intro-strip{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:34px;padding:0 3px 9px;border-bottom:1px solid var(--border);overflow:hidden;max-height:44px;opacity:1;transition:max-height .4s,padding .4s,opacity .3s,border-color .3s}
-.intro-strip>div{display:flex;align-items:center;gap:9px;font-size:10px;color:var(--muted-foreground)}
-.intro-strip strong{color:var(--foreground);font-weight:500}
-.intro-dash{color:var(--faint)}
-.intro-strip small{color:var(--faint);font:9px var(--font-mono)}
+
+
+
+
+
 .breathing-ring,.tiny-dot{display:inline-block;flex:0 0 auto;width:7px;height:7px;border:1px solid var(--silver);border-radius:50%;box-shadow:0 0 0 0 rgba(255,255,255,.12);animation:breathe 2.6s ease-in-out infinite}
 .main-nav{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:69px;padding:9px 12px;margin:9px auto 0;border:1px solid transparent;border-radius:999px;background:rgba(0,0,0,.5);transition:width .45s,background .35s,border-color .35s,box-shadow .35s,padding .35s}
 .brand{display:flex;align-items:center;gap:10px;min-width:205px;transition:min-width .3s}
@@ -116,7 +116,7 @@ a:hover .arrow-icon:where(:not(.down)){color:#fff}
 .github-pill .arrow-icon{font-size:14px}
 .menu-toggle{display:none;align-items:center;gap:9px;padding:10px 14px;border:1px solid var(--border-strong);border-radius:999px;background:transparent;font-size:11px;cursor:pointer}
 .menu-toggle span{display:block;width:13px;height:1px;background:#eee}
-.site-header.scrolled .intro-strip{max-height:0;min-height:0;padding-top:0;padding-bottom:0;opacity:0;border-color:transparent}
+
 .site-header.scrolled .main-nav{width:min(760px,calc(100% - 24px));min-height:56px;margin-top:0;padding:6px 11px;border-color:rgba(255,255,255,.18);background:rgba(8,8,8,.9);box-shadow:0 16px 52px rgba(0,0,0,.72),0 0 0 1px rgba(255,255,255,.025);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px)}
 .site-header.scrolled .brand{min-width:40px;width:40px}
 .site-header.scrolled .brand-copy{width:0;opacity:0;overflow:hidden}
@@ -543,9 +543,9 @@ section{scroll-margin-top:115px}
   :root{--page-pad:20px}
   html{scroll-padding-top:90px}
   .site-header{padding-top:7px}
-  .intro-strip{min-height:31px;padding-bottom:7px}
-  .intro-strip>div{gap:6px;font-size:8px}
-  .intro-strip small{display:none}
+
+
+
   .main-nav{width:calc(100% - 14px);min-height:57px;padding:6px 8px;margin-top:7px;border:1px solid #252525;border-radius:999px;background:rgba(0,0,0,.78)}
   .brand{gap:8px}
   .brand img{width:32px;height:32px}
