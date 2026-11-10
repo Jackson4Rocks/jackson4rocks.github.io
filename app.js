@@ -115,8 +115,27 @@
     </div>`;
   }
 
+  function retroPreview(){
+    return `<div class="preview-shell preview-retro">
+      <div class="retro-desktop">
+        <div class="retro-shortcuts">
+          <div><i>PC</i><span>My Computer</span></div>
+          <div><i>NET</i><span>Network</span></div>
+          <div><i>PAINT</i><span>Paint</span></div>
+          <div><i>GAMES</i><span>Games</span></div>
+        </div>
+        <div class="retro-window">
+          <div class="retro-window-head"><b>Welcome to Retro98</b><span>— □ ×</span></div>
+          <div class="retro-window-body"><span class="retro-window-mark">98</span><div><b>Your desktop, reimagined.</b><small>Classic apps and games on Android.</small></div></div>
+          <div class="retro-window-foot"><span>Ready</span><span>Retro98 v1.0</span></div>
+        </div>
+        <div class="retro-taskbar"><b><i>▦</i> Start</b><span>Welcome to Retro98</span><small>10:08</small></div>
+      </div>
+    </div>`;
+  }
+
   function featureMarkup(project,i){
-    const preview={glyph:glyphPreview,cipher:cipherPreview,oneglyph:oneGlyphPreview,tv:tvPreview}[project.preview]();
+    const preview={glyph:glyphPreview,cipher:cipherPreview,oneglyph:oneGlyphPreview,tv:tvPreview,retro:retroPreview}[project.preview]();
     return `<article class="feature-row ${i%2?"reverse":""}" data-reveal>
       <div class="feature-copy">
         <div class="feature-top"><span class="feature-kind">${esc(project.number)} — ${esc(project.kind)}</span><span class="status-tag ${project.solidState?"solid":""}">${project.solidState?"":'<i></i>'}${esc(project.state)}</span></div>
@@ -125,7 +144,7 @@
         <p class="feature-description">${esc(project.description)}</p>
         <ul class="feature-details">${project.details.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>
         <div class="feature-tech">${techLine(project.tech)}</div>
-        <div class="feature-actions">${external(project.url,`Repository ${arrow()}`,"pill-button white")}${project.site?external(project.site,`Project site ${arrow()}`,"pill-button outline"):""}</div>
+        <div class="feature-actions">${project.release?external(project.release,`Download APK ${arrow()}`,"pill-button white"):""}${external(project.url,`Repository ${arrow()}`,project.release?"pill-button outline":"pill-button white")}${project.site?external(project.site,`Project site ${arrow()}`,"pill-button outline"):""}</div>
       </div>
       <div class="feature-preview spotlight" data-preview="${esc(project.preview)}">
         <div class="preview-index">${esc(project.number)} / PREVIEW</div>
@@ -140,11 +159,12 @@
     if(type==="wave") return `<div class="art-wave">${Array.from({length:24},(_,i)=>`<i style="--bar:${(18+Math.abs(Math.sin(i*.7))*58+(i%4)*5)}%;--n:${i}"></i>`).join("")}<div class="mini-player"><span>◉&nbsp; Now playing</span><b>Ⅱ</b></div></div>`;
     if(type==="shield") return `<div class="art-shield"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 8 82 20v25c0 22-13 37-32 47C31 82 18 67 18 45V20L50 8Z"/><rect x="36" y="44" width="28" height="23" rx="5"/><path d="M42 44v-7a8 8 0 0 1 16 0v7"/></svg><div><span>PIN</span><span>FINGERPRINT</span><span>FACE ID</span></div></div>`;
     if(type==="clock") return `<div class="art-clock"><div class="clock-face"><i class="hand hour"></i><i class="hand minute"></i><i class="hand second"></i><b></b></div><span>YOUR LOCAL TIME</span><strong class="clock-digital">10:10</strong></div>`;
+    if(type==="desktop") return `<div class="art-desktop"><div class="desktop-mini-bar"><b>GLYPH</b><span>● ● ●</span></div><div class="desktop-mini-content"><div class="desktop-mini-dock"><i>⌂</i><i>▤</i><i>⌘</i><i>⚙</i></div><div class="desktop-mini-widget"><strong>10:08</strong><small>ARCH LINUX</small></div><div class="desktop-mini-row"><span>AMOLED BLACK</span><span>NOCTALIA</span></div></div></div>`;
     return `<div class="art-terminal"><div class="art-terminal-head"><i></i><i></i><i></i><span>leon@arch:~</span></div><code>$ avenueboot Win11.iso /dev/sdb</code><code>→ checking ISO… <b>Windows ✓</b></code><code>→ writing <b>████████████ 100%</b></code><code>✓ done. safe to remove.</code></div>`;
   }
 
   function appMarkup(project,i){
-    return `<article class="app-card app-span-${i===0?7:i===1?5:i===2?5:7}" data-reveal>
+    return `<article class="app-card app-span-${i%4===0?7:i%4===1?5:i%4===2?5:7}" data-reveal>
       <div class="app-copy">
         <div class="app-top"><span>${esc(project.kind)}</span><span class="status-tag ${project.solidStatus?"solid":""}">${project.solidStatus?"":'<i></i>'}${esc(project.status)}</span></div>
         <h4>${esc(project.name)}<a href="${esc(project.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(project.name)} repository">${arrow()}</a></h4>
@@ -160,9 +180,9 @@
     root.innerHTML=`
       <a class="skip-link" href="#main">Skip to content</a>
       <header class="site-header" id="site-header">
-        <div class="availability-strip wrap">
-          <div><span class="breathing-ring"></span><strong>Currently offline</strong><span class="availability-dash">—</span><span>Back in March 2027</span></div>
-          <small>Repositories stay open in the meantime</small>
+        <div class="intro-strip wrap">
+          <div><span class="breathing-ring"></span><strong>Independent developer</strong><span class="intro-dash">—</span><span>Android apps · Linux software · open source</span></div>
+          <small>Projects and source code on GitHub</small>
         </div>
         <nav class="main-nav wrap" aria-label="Main navigation">
           <a class="brand" href="#top" aria-label="Leon Sony home">
@@ -193,7 +213,7 @@
           <a href="#contact" data-menu-link="contact"><small>04</small>Contact <span>↗</span></a>
         </nav>
         <div class="mobile-sheet-bottom">
-          <p><i></i> ${esc(C.identity.offline)}</p>
+          <p><i></i> Open-source projects · source on GitHub</p>
           <div>${external(C.identity.github,`GitHub ${arrow()}`,"pill-button outline")}${external("mailto:"+C.identity.email,`Email ${arrow()}`,"pill-button white")}</div>
         </div>
       </div>
@@ -206,13 +226,13 @@
               <h1 id="hero-title" class="hero-title"><span class="title-mask"><span>nvim</span></span><span class="title-mask sony"><span>~/leon.</span></span><span class="title-mask sony command-third"><span>profile</span></span></h1>
               <div class="hello-row"><span>↳ Hello</span><p>I'm Leon — a developer working across <b>Linux and Android</b>. I build apps, desktop environments, Android TV experiences and low-level experiments, and I like making software feel right <em>from the surface down.</em></p></div>
               <div class="hero-actions"><a class="pill-button white" href="#work">Selected work ${arrow(true)}</a>${external(C.identity.github,"github.com/Jackson4Rocks "+arrow(),"pill-button outline")}</div>
-              <div class="hero-offline"><span class="breathing-ring"></span><span>${esc(C.identity.offline)}</span></div>
+              <div class="hero-note"><span class="breathing-ring"></span><span>Independent developer · building in the open</span></div>
             </div>
             <div class="hero-visual">
               ${editorMarkup()}
               <div class="hero-chips">
-                <div><small>Status</small><b><i class="tiny-dot"></i>offline</b></div>
-                <div><small>Returns</small><b>March 2027</b></div>
+                <div><small>Focus</small><b>Linux &amp; Android</b></div>
+                <div><small>Projects</small><b>GlyphOS · Retro98</b></div>
                 <div><small>OS</small><b>Arch Linux</b></div>
                 <div><small>Editor</small><b>Visual Studio Code</b></div>
               </div>
@@ -253,7 +273,7 @@
           <div class="contact-grid">
             <a href="${esc(C.identity.github)}" target="_blank" rel="noopener noreferrer"><small>GitHub</small><b>@Jackson4Rocks ${arrow()}</b></a>
             <a href="https://github.com/Jackson4Rocks?tab=repositories" target="_blank" rel="noopener noreferrer"><small>Source</small><b>All repositories ${arrow()}</b></a>
-            <div><small>Status</small><b><i class="tiny-dot"></i>Currently offline / Back in March 2027</b></div>
+            <div><small>Focus</small><b>Linux · Android · systems</b></div>
           </div>
         </section>
       </main>
