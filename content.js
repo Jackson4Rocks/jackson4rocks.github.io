@@ -4,8 +4,7 @@ window.PORTFOLIO_CONTENT = {
     handle: "@jackson4rocks",
     github: "https://github.com/Jackson4Rocks",
     email: "leonsonyk@gmail.com",
-    avatar: "https://avatars.githubusercontent.com/u/192235822?v=4&s=256",
-    offline: "Currently offline — Back in March 2027"
+    avatar: "https://avatars.githubusercontent.com/u/192235822?v=4&s=256"
   },
   hero: {
     intro: "I'm Leon — a developer working across Linux and Android. I build apps, desktop environments, Android TV experiences and low-level experiments, and I like making software feel right from the surface down.",
@@ -20,8 +19,7 @@ window.PORTFOLIO_CONTENT = {
       { kind:"field", key:"editor", value:'"Visual Studio Code"', comma:true },
       { kind:"field", key:"side_editor", value:'"Neovim"', comma:true },
       { kind:"field", key:"focus", value:'{ "linux", "android", "low-level" }', comma:true },
-      { kind:"field", key:"building", value:'{ "GlyphOS", "Cipher" }', comma:true },
-      { kind:"field", key:"status", value:'"offline · back 2027-03"', comma:true },
+      { kind:"field", key:"building", value:'{ "GlyphOS", "Cipher", "Retro98" }', comma:true },
       { kind:"field", key:"motto", value:'"build · break · fix"', comma:false },
       { kind:"plain", text:"}" },
       { kind:"keyword", text:"return", key:"leon" }
@@ -42,7 +40,7 @@ window.PORTFOLIO_CONTENT = {
     ],
     environment:[
       ["os","Arch Linux"],
-      ["editor","Neovim · VS Code"],
+      ["editor","Visual Studio Code · Neovim (side)"],
       ["shell","Fish + custom config"],
       ["desktop","Hyprland · Wayland"],
       ["vcs","Git + GitHub"],
@@ -128,6 +126,24 @@ window.PORTFOLIO_CONTENT = {
       url:"https://github.com/Jackson4Rocks/PublivoreTube",
       site:"https://jackson4rocks.github.io/PublivoreTube/",
       preview:"tv"
+    },
+    {
+      number:"05",
+      kind:"Android · Desktop simulator",
+      state:"v1.0 released",
+      solidState:true,
+      name:"Retro98",
+      tagline:"A little Windows nostalgia, rebuilt for Android.",
+      description:"A redux of LR-Soft's Windows 98 Simulator, bringing a familiar desktop experience to Android with a Start menu, taskbar, movable app windows, classic utilities and built-in games.",
+      details:[
+        "Desktop icons, Start menu, taskbar and resizable application windows",
+        "Paint, Calculator, Notepad, WordPad, Internet Explorer and File Explorer",
+        "Minesweeper and Solitaire, plus a virtual filesystem and desktop customization"
+      ],
+      tech:["Android","Desktop simulation","Touch + mouse"],
+      url:"https://github.com/Jackson4Rocks/Retro98",
+      release:"https://github.com/Jackson4Rocks/Retro98/releases/download/Release/Retro98.v1.0.apk",
+      preview:"retro"
     }
   ],
   moreApps: [
@@ -160,6 +176,15 @@ window.PORTFOLIO_CONTENT = {
       art:"clock"
     },
     {
+      name:"GlyphDotfiles",
+      url:"https://github.com/Jackson4Rocks/GlyphDotfiles",
+      kind:"Linux · Arch + Hyprland",
+      status:"Installer + themes",
+      description:"A Nothing-inspired Arch Linux desktop setup with AMOLED Black and Pure White themes, Noctalia, Fish, Kitty, Yazi and Fastfetch, plus a backup-aware installer with dry-run and uninstall support.",
+      tech:["Arch Linux","Hyprland","Noctalia","Fish"],
+      art:"desktop"
+    },
+    {
       name:"AvenueBoot",
       url:"https://github.com/Jackson4Rocks/AvenueBoot",
       kind:"Linux · CLI tool",
@@ -179,24 +204,17 @@ window.PORTFOLIO_CONTENT = {
       url:"https://github.com/Jackson4Rocks/CathodeROM"
     },
     {
-      name:"Nord 2T device tree",
-      kind:"Android device",
-      description:"Device tree for the OnePlus Nord 2T 5G (karen, MT6893), targeting LineageOS 23.2 / Android 16.",
-      status:"Work in progress",
-      url:"https://github.com/Jackson4Rocks/android_device_oneplus_karen"
-    },
-    {
-      name:"Miniland",
-      kind:"Hyprland utility",
-      description:"Adds a familiar minimize-window workflow to Hyprland using a named special workspace and a searchable picker.",
-      status:"Utility",
-      url:"https://github.com/Jackson4Rocks/miniland"
+      name:"Tahoe Recovery",
+      kind:"GitHub Actions utility",
+      description:"A workflow that fetches Apple's macOS Tahoe installer and extracts a recovery-image artifact; the repository does not host Apple software.",
+      status:"Automation",
+      url:"https://github.com/Jackson4Rocks/tahoe-recovery"
     },
     {
       name:"Evexia",
       kind:"Android side project",
-      description:"A planning and study hub — timetable, tasks, flashcards and a small document library.",
-      status:"v1.0 milestone",
+      description:"A small planning and study hub — timetable, tasks, flashcards and a document library.",
+      status:"Side project",
       url:"https://github.com/Jackson4Rocks/Evexia"
     }
   ],
@@ -209,7 +227,7 @@ window.PORTFOLIO_CONTENT = {
   contact: {
     headingA:"Found a bug,",
     headingB:"have an idea?",
-    body:"Or just want to see what I'm building? The source and project updates live on GitHub, and my inbox is open — though replies will wait until I'm back."
+    body:"For project questions, bug reports or ideas, send me an email or open an issue on GitHub. You can also browse the repositories to follow what I'm building."
   },
   footer:"Built close to the system · open source where possible"
 };
