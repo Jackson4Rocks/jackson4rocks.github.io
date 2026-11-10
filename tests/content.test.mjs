@@ -62,3 +62,10 @@ test("new Linux projects and utilities are represented", () => {
   assert.match(content, /name:"Tahoe Recovery"/);
   assert.match(content, /https:\/\/github\.com\/Jackson4Rocks\/GlyphDotfiles/);
 });
+
+
+test("the website includes the same animated Pac-Man contribution graph as the profile README", () => {
+  assert.match(app, /pacman-contribution-graph-dark\.svg/);
+  assert.match(app, /Animated Pac-Man contribution graph/);
+  assert.match(index, /\.contribution-graph img/);
+});
