@@ -9,8 +9,10 @@ const content = readFileSync(join(root, "content.js"), "utf8");
 const app = readFileSync(join(root, "app.js"), "utf8");
 const html = readFileSync(join(root, "index.html"), "utf8");
 
-test("the March 2027 availability notice remains unchanged", () => {
-  assert.ok(content.includes("Currently offline — Back in March 2027"));
+test("temporary availability and return-date messaging is absent", () => {
+  const source = [content, app, html].join("\n").toLowerCase();
+  assert.equal(source.includes("currently offline"), false);
+  assert.equal(source.includes("march 2027"), false);
 });
 
 test("deprecated or excluded projects never appear in site content", () => {
@@ -46,4 +48,17 @@ test("the VS Code profile file is displayed as ~/leon.profile without a Lua exte
   assert.doesNotMatch(content, /leon\.profile\.lua/);
   assert.match(app, /Visual Studio Code — <b>~\/leon\.profile<\/b>/);
   assert.doesNotMatch(app, /leon\.profile\.lua/);
+});
+
+test("Retro98 is featured with its v1.0 APK download", () => {
+  assert.match(content, /name:"Retro98"/);
+  assert.match(content, /Retro98\/releases\/download\/Release\/Retro98\.v1\.0\.apk/);
+  assert.match(app, /function retroPreview/);
+  assert.match(app, /Download APK/);
+});
+
+test("new Linux projects and utilities are represented", () => {
+  assert.match(content, /name:"GlyphDotfiles"/);
+  assert.match(content, /name:"Tahoe Recovery"/);
+  assert.match(content, /https:\/\/github\.com\/Jackson4Rocks\/GlyphDotfiles/);
 });
